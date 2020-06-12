@@ -27,7 +27,7 @@ func main() {
 
 	_, err = fmt.Fprintf(f, "exec %s", desiredProfile)
 	if err != nil {
-		fmt.Println("could not set process exec attr to unconfined:", err)
+		fmt.Printf("could not set process exec attr to %s: %v\n", desiredProfile, err)
 		os.Exit(1)
 	}
 
